@@ -1,0 +1,21 @@
+{
+  "name": "csc-310-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "author": "csc 310 Group 28",
+  "license": "MIT",
+  "engines": {
+    "node": "18.x"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongoose": "^8.0.4",
+    "nodemon": "^2.0.22"
+  }
+}

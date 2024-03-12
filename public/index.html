@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@100;200;300;400;500;600;700&family=Roboto:wght@100;300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <script defer src="./script.js"></script>
+    <title>Customer Feedback Form</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="nav">
+            <h1>Boggle</h1>
+        </nav>
+        <div class="hero-section">
+            <div class="hero-content">
+                <!-- Left Side Content -->
+                <div class="text-content">
+                    <h1>We'd love to hear your thoughts</h1>
+                    <p>
+                        Tell us about your vision: which challenges are you facing? We'd love to stay in touch with you,
+                        so we are always ready to answer any question that interests you.
+                    </p>
+                </div>
+                <!-- Add your contact links and social media handles here -->
+                <div class="socials">
+                    <div class="contact-info">
+                        <div class="phone">
+                            <p>Phone:</p>
+                            <p class="details">+2341234567812</p>
+                        </div>
+                        <div class="mail">
+                            <p>Mail:</p>
+                            <p class="details">project@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-section">
+                <!-- Right Side Form -->
+                <form action="/getfeedback" method="post" class="form">
+                    <!-- Include form fields (input, textarea, etc.) as needed -->
+                    <div class="inputs">
+                        <div class="input">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" placeholder="What's your name?" required>
+                        </div>
+                        <div class="input">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" placeholder="What's your email" required>
+                        </div>
+                        <div class="input">
+                            <label for="message">Feedback</label>
+                            <input type="text" name="message" id="message" placeholder="Share your thoughts"
+                                required></input>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn">Send<br>&rarr;</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

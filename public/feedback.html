@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Feedback</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <nav class="nav">
+            <h1> Boggle Customer Feedbacks</h1>
+        </nav>
+
+        <!-- Feedback cards will be added here dynamically -->
+        <div id="feedback-container" class="feedback__container">
+
+        </div>
+    </div>
+</body>
+
+<script>
+    fetch("/getfeedback")
+        .then((response) => response.json())
+        .then((feedbackData) => {
+            const feedbackContainer = document.getElementById("feedback-container");
+
+            console.log(feedbackData);
+            // Create a card for each feedback entry
+            feedbackData.forEach((feedback) => {
+                const card = document.createElement("div");
+                card.className = "card";
+                card.innerHTML = `
+                        <h3>${feedback.name}</h3>
+                    `;
+                card.dataset.content = `"${feedback.message}"`;
+                feedbackContainer.appendChild(card);
+            });
+        })
+        .catch((error) => console.error("Error fetching feedback:", error));
+
+</script>
+
+</html>
